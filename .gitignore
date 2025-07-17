@@ -1,0 +1,11 @@
+# Python virtual environment folder
+ntp_env/
+
+# Python's cached files
+__pycache__/
+
+# Data files we generate. These can be huge!
+*.csv
+
+# Trained models. These can also be huge!
+*.h5
