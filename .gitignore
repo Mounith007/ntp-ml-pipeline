@@ -1,11 +1,18 @@
-# Python virtual environment folder
-ntp_env/
+# Python virtual environment
+/ntp_env/
 
-# Python's cached files
+# Python cache files
 __pycache__/
+*.pyc
 
-# Data files we generate. These can be huge!
+# Data files (we generate these, we don't store them in Git)
 *.csv
 
-# Trained models. These can also be huge!
+# Trained models (these are outputs, or "artifacts")
 *.h5
+*.pkl
+
+# IDE and OS specific files
+.vscode/
+.idea/
+.DS_Store
