@@ -23,13 +23,16 @@ def train_surrogate_model():
     y_train_scaled = scaler_y.transform(y_train)
     y_test_scaled = scaler_y.transform(y_test)
 
+
     # 4. Build the Neural Network Model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(128, activation='relu'),
+        tf.keras.layers.Dense(128, activation='relu'), # <-- NEW LAYER
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(y_train.shape[1]) # Output layer
     ])
+    
 
     model.compile(optimizer='adam', loss='mean_squared_error')
     print("Model Summary:")
